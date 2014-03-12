@@ -1,0 +1,471 @@
+/* ======================  GLOBAL STYLES =========*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	font-family: sans-serif;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+
+/*	background: url(../img/trail.jpg) #eee no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;*/
+}
+
+ .label {
+ 	font-family: 'Roboto', sans-serif;
+ 	font-weight: 300;
+ }
+ 
+/* ====================== NAVIGATION */
+
+.contain-to-grid {
+	background: white;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.top-bar-section {
+	background: #fff;
+}
+
+	.top-bar-section li a:not(.button) {
+	    background: #fff;
+	    color: #49695f;
+	}
+
+		.top-bar-section li a:not(.button):hover {
+		    background: #333;
+		    color: #fff;
+		}
+
+
+	.top-bar-section ul {
+		display: table;
+		margin: 0 auto;
+	}
+
+		.top-bar-section ul li.active > a {
+		    background: #333;
+		    color: white; 
+		}
+
+		.top-bar-section ul li.active > a:hover {
+		    background: #333;
+		    color: white; 
+		}
+
+/* ====================== PICTURE SECTION & OPENING CALLOUT */
+
+.picture-main {
+	padding-top: 9em;
+	padding-bottom: 9em;
+	color: #f8f8f8;
+	background: url(../img/trail.jpg) #eee no-repeat center center;
+	background-size: cover;
+	text-align: center;
+}
+
+.intro-main > h1 {
+	margin-top: 0;
+	padding-top: 0;
+	font-size: 7em;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+	color: #fff;
+	font-weight: 400;
+}
+
+	.intro-main > h3 {
+		text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+		color: #efefef;
+		font-size: 2em;
+		font-weight: 300;
+	}
+
+.hire-me {
+	margin-top: 5em;
+	background: transparent;
+	color: #eee;
+	border: solid 1.5px #bbb;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25em;
+
+	webkit-transition: color 750ms ease;	/* really cool button hover transition */
+    -moz-transition: color 750ms ease;
+    -o-transition: color 750ms ease;
+    transition: color 750ms ease;
+}
+
+	.hire-me:hover, .hire-me:focus {
+		background-color: #eee;
+		color: #49695f;
+		border: solid 1.5px #eee;
+	}
+
+	.hire-me i {
+		padding-left: .5em;
+	}
+
+/* ======================= ABOUT ME CONTENT ============ */
+
+.section-about {
+	background-color: #49695f;
+	color: #fff;
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+	.section-about h2 {
+		color: #fff;
+		font-weight: 700;
+		font-size: 4em;
+	}
+
+.believe {
+	list-style-type: none;
+	font-size: 1.5em;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+
+	.believe:first-child {
+		padding-top: 1em;
+	}
+
+.quote-about {
+	color: #ccc;
+	margin-top: 3em;
+	border-left: none;
+	font-style: italic;
+	font-size: 1.25em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.cite-about {
+	color: #ccc;
+	padding-top: .75em;
+	font-size: .75em;
+}
+
+.negative {	/* make header underline tighter */
+	margin-bottom: -10px;
+}
+
+/* ======================= EXPERIENCE CONTENT ============ */
+
+.section-experience {
+	background-color: #fff;
+	padding-top: 4em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+	.section-experience h3 {
+		color: #49695f;
+	}
+
+.cover-letter {
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+	display: block;
+	width: 100%;
+	background: transparent;
+	color: #555;
+	border: solid 1.5px #555;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+
+	webkit-transition: color 500ms ease;
+    -moz-transition: color 500ms ease;
+    -o-transition: color 500ms ease;
+    transition: color 500ms ease;
+}
+
+.cover-letter:hover {
+	background: transparent;
+	color: #111;
+	border: solid 1.5px #111;
+}
+
+.reveal-modal-inner {
+    margin: 0 auto;
+    position: relative;
+    max-width: 40em;
+}
+
+ul.inline-list {
+	margin-bottom: .5em;
+}
+
+.inline-list > li {
+	margin-left: 1em;
+}
+
+.label-job {
+	padding: .4em;
+	font-size: 1.5em;
+}
+
+.section-experience h2 {
+	font-weight: 700;
+	color: #333;
+	font-size: 4em;
+}
+
+.job {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.text-mute {
+	color: #888;
+}
+
+.divide-section {
+	padding-top: 1.5em;
+	width: 4em;
+	margin: auto;
+}
+
+.divide-header {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.label.green {
+    background-color: #49695f;
+    color: white; 
+}
+
+/* ====================== SKILLS CONTENT ================== */
+
+.section-skills {
+	padding-top: 3em;
+	padding-bottom: 4em;
+	background: #f0f0f0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #888;
+}
+
+	.section-skills h3 {
+		font-weight: 500;
+		color: #333;
+	}
+
+.label.orange {
+	background-color: #fbb147;
+    color: white;
+}
+
+.label.black {
+	background-color: #444;
+    color: white;
+}
+
+.label.mint {
+	background-color: #3cfba3;
+    color: white;
+}
+
+.label-skill {
+	padding: .5em;
+	font-size: 1em;
+	margin-bottom: .25em;
+}
+
+#learning {
+	margin-top: 3em;
+}
+
+/* ====================== PASSIONS CONTENT ================ */
+
+.section-passions {
+	background-color: #fbb147;
+	color: #fff;
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+	.section-passions h2 {
+		color: #fff;
+		font-weight: 700;
+		margin-bottom: 1em;
+		font-size: 4em;
+	}
+
+.align-center {
+	display: block;
+	margin: auto;
+}
+
+.pic-center {
+	margin: auto;
+	display: block;
+}
+
+.label-passion {
+	padding: .75em;
+	font-size: 1.5em;
+	border: 1px solid #eee;
+	width: 50%;
+}
+
+.passions-pic {
+	margin-bottom: 4em;
+}
+
+.quote-passion {
+	color: #fff;
+	max-width: 35em;
+	border-left: none;
+	margin: auto;
+}
+
+.passion-content {
+	margin: 2em auto;
+	font-size: 1.1em;
+}
+
+.cite-passion {
+	padding-bottom: 2em;
+}
+
+/* ===================== CONNECT CONTENT =================== */
+
+.section-connect {
+	background-color: #3cfba3;
+	color: #fff;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	border-top: solid 1px #888;
+}
+
+	.section-connect h2 {
+		color: #fff;
+		font-weight: 700;
+		font-size: 4em;
+	}
+
+	.section-connect a {
+		font-size: 2.5em;
+		text-decoration: none;
+		color: #fff;
+		webkit-transition: color 500ms ease;
+	    -moz-transition: color 500ms ease;
+	    -o-transition: color 500ms ease;
+	    transition: color 500ms ease;
+	}
+
+		.section-connect a:hover {
+			color: #ddd;
+		}
+
+.icon {
+	font-size: 3em;
+	color: #555;
+	padding: .1em;
+	webkit-transition: color 1000ms ease;
+    -moz-transition: color 1000ms ease;
+    -o-transition: color 1000ms ease;
+    transition: color 1000ms ease;
+}
+
+	.icon:hover {
+		color: #eee;
+	}
+
+.at {
+	font-size: .8em;
+	padding-left: .25em;
+	padding-right: .2em;
+}
+
+.social {
+	margin-top: 2em;
+}
+
+.mail {
+	padding-bottom: 1em;
+}
+
+/* ============== FOOTER ============ */
+
+footer {
+	font-size: .75em;
+	color: #bbb;
+	padding: .75em;
+}
+
+/* ============== MEDIA QUERIES ===== */
+
+/* SMALL ONLY */
+
+@media only screen and (max-width: 40em) {
+	.section-connect a {
+		font-size: 1.5em;
+	}
+
+	.icon {
+		font-size: 2.5em;
+	}
+
+	.label-passion {
+		padding: .7em;
+		font-size: 1.25em;
+	}
+
+	.picture-main {
+		padding-top: 2.5em;
+		padding-bottom: 3em;
+	}
+
+	.hire-me {
+		margin-top: 2.5em;
+	}
+
+}
+
+/* MEDIUM ONLY*/
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.icon {
+		font-size: 2.5em;
+	}
+
+	.passions-pic {
+	 	width: 70%;
+	}
+
+	.picture-main {
+		padding-top: 4em;
+		padding-bottom: 4em;
+	}
+
+	.passion-content {
+		text-align: center;
+	}
+
+}
+
+/* MEDIUM & UP */
+
+@media only screen and (min-width: 40.063em) { 
+	.width {
+		max-width: 40em;
+	}
+}
+
+/* LARGE ONLY */
+
+/*@media only screen and (min-width: 64em) {
+
+}*/
