@@ -432,6 +432,27 @@ footer {
 		margin-top: 2.5em;
 	}
 
+	.hire-me {
+		webkit-transition: none !important;
+	    -moz-transition: none !important;
+	    -o-transition: none !important;
+	    transition: none !important;
+	}
+
+	.section-connect a {
+		webkit-transition: none !important;
+	    -moz-transition: none !important;
+	    -o-transition: none !important;
+	    transition: none !important;
+	}
+
+	.icon {
+	webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 }
 
 /* MEDIUM ONLY*/
