@@ -234,6 +234,10 @@ ul.inline-list {
 	color: #666;
 }
 
+.bold {
+	font-weight: 700;
+}
+
 .divide-section {
 	padding-top: 1.5em;
 	width: 4em;
