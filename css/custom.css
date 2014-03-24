@@ -184,10 +184,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 
-	webkit-transition: color 500ms ease;
-    -moz-transition: color 500ms ease;
-    -o-transition: color 500ms ease;
-    transition: color 500ms ease;
+	webkit-transition: color 500ms ease, border 500ms ease;
+    -moz-transition: color 500ms ease, border 500ms ease;
+    -o-transition: color 500ms ease, border 500ms ease;
+    transition: color 500ms ease, border 500ms ease;
 }
 
 .cover-letter:hover {
@@ -228,6 +228,10 @@ ul.inline-list {
 
 .text-mute {
 	color: #888;
+}
+
+.text-current {
+	color: #666;
 }
 
 .divide-section {
