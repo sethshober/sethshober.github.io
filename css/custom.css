@@ -367,14 +367,16 @@ ul.inline-list {
 		font-size: 2.5em;
 		text-decoration: none;
 		color: #fff;
-		webkit-transition: color 500ms ease;
-	    -moz-transition: color 500ms ease;
-	    -o-transition: color 500ms ease;
-	    transition: color 500ms ease;
+		text-shadow: 0 0 0.1em #fff, 0 0 0.1em #fff;
+		webkit-transition: color 500ms ease, text-shadow 500ms ease;
+	    	-moz-transition: color 500ms ease, text-shadow 500ms ease;
+	    	-o-transition: color 500ms ease, text-shadow 500ms ease;
+	    	transition: color 500ms ease, text-shadow 500ms ease;
 	}
 
 		.section-connect a:hover {
-			color: #ddd;
+			color: #eee;
+			text-shadow: none;
 		}
 
 .icon {
