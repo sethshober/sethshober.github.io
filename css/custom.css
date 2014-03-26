@@ -423,11 +423,15 @@ footer {
 
 @media only screen and (max-width: 40em) {
 	.section-connect a {
-		font-size: 1.5em;
+		font-size: 2em;
+		webkit-transition: none !important;
+	    	-moz-transition: none !important;
+	    	-o-transition: none !important;
+	    	transition: none !important;
 	}
 
 	.icon {
-		font-size: 2.5em;
+		font-size: 3em;
 	}
 
 	.label-passion {
@@ -445,13 +449,6 @@ footer {
 	}
 
 	.hire-me {
-		webkit-transition: none !important;
-	    -moz-transition: none !important;
-	    -o-transition: none !important;
-	    transition: none !important;
-	}
-
-	.section-connect a {
 		webkit-transition: none !important;
 	    -moz-transition: none !important;
 	    -o-transition: none !important;
