@@ -301,6 +301,7 @@ ul.inline-list {
 	color: #fff;
 	padding-top: 4em;
 	padding-bottom: 4em;
+	text-shadow: 0 0 0.1em #444;
 }
 
 	.section-passions h2 {
@@ -361,6 +362,7 @@ ul.inline-list {
 		color: #fff;
 		font-weight: 700;
 		font-size: 4em;
+		text-shadow: 0 0 0.1em #555;
 	}
 
 	.section-connect a {
