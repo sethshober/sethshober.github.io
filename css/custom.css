@@ -423,7 +423,7 @@ footer {
 
 @media only screen and (max-width: 40em) {
 	.section-connect a {
-		font-size: 2em;
+		font-size: 1.5em;
 		webkit-transition: none !important;
 	    	-moz-transition: none !important;
 	    	-o-transition: none !important;
@@ -468,7 +468,7 @@ footer {
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 	.icon {
-		font-size: 2.5em;
+		font-size: 3em;
 	}
 
 	.passions-pic {
