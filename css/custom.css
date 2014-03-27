@@ -418,13 +418,18 @@ footer {
 /* SMALL ONLY */
 
 @media only screen and (max-width: 40em) {
-	.section-connect a {
-		font-size: 1.5em;
-		webkit-transition: none !important;
-	    	-moz-transition: none !important;
-	    	-o-transition: none !important;
-	    	transition: none !important;
+	.section-connect {
+	padding-top: 2em;
+	padding-bottom: 2em;
 	}
+	
+		.section-connect a {
+			font-size: 1.5em;
+			webkit-transition: none !important;
+		    	-moz-transition: none !important;
+		    	-o-transition: none !important;
+		    	transition: none !important;
+		}
 
 	.icon {
 		font-size: 3em;
