@@ -308,7 +308,6 @@ ul.inline-list {
 		font-weight: 700;
 		margin-bottom: 1em;
 		font-size: 4em;
-		text-shadow: 0 0 0.1em #444;
 	}
 
 .align-center {
@@ -362,6 +361,7 @@ ul.inline-list {
 		color: #fff;
 		font-weight: 700;
 		font-size: 4em;
+		text-shadow: 0 0 0.1em #555;
 	}
 
 	.section-connect a {
