@@ -380,9 +380,11 @@ ul.inline-list {
 		}
 
 .icon {
-	font-size: 3em;
+	font-size: 2em;
 	color: #555;
 	padding: .1em;
+	outline: 1px white;
+	text-shadow: none;
 	webkit-transition: color 1000ms ease;
     -moz-transition: color 1000ms ease;
     -o-transition: color 1000ms ease;
