@@ -98,7 +98,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.25em;
 
-	webkit-transition: color 750ms ease;	/* really cool button hover transition */
+	-webkit-transition: color 750ms ease;	/* really cool button hover transition */
     -moz-transition: color 750ms ease;
     -o-transition: color 750ms ease;
     transition: color 750ms ease;
@@ -184,7 +184,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 
-	webkit-transition: color 500ms ease, border 500ms ease;
+	-webkit-transition: color 500ms ease, border 500ms ease;
     -moz-transition: color 500ms ease, border 500ms ease;
     -o-transition: color 500ms ease, border 500ms ease;
     transition: color 500ms ease, border 500ms ease;
@@ -368,7 +368,7 @@ ul.inline-list {
 		text-decoration: none;
 		color: #fff;
 		text-shadow: 0 0 0.1em #fff, 0 0 0.1em #fff;
-		webkit-transition: color 500ms ease, text-shadow 500ms ease;
+		-webkit-transition: color 500ms ease, text-shadow 500ms ease;
 	    	-moz-transition: color 500ms ease, text-shadow 500ms ease;
 	    	-o-transition: color 500ms ease, text-shadow 500ms ease;
 	    	transition: color 500ms ease, text-shadow 500ms ease;
