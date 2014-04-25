@@ -520,6 +520,11 @@ footer {
 }*/
 
 
+
+
+/* FOUNDATION ICONS */
+
+.fi-at-sign:before,
 .fi-like:before,
 .fi-social-github:before,
 .fi-social-linkedin:before,
@@ -535,6 +540,7 @@ footer {
 	  text-decoration: inherit;
 }
 
+.fi-at-sign:before { content: "\f113"; }
 .fi-like:before { content: "\f164"; }
 .fi-social-github:before { content: "\f1c9"; }
 .fi-social-linkedin:before { content: "\f1d0"; }
