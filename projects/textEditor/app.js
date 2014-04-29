@@ -1,38 +1,42 @@
-var editor = $("#editor");
-var display = $("#display");
-var title = $("#title");
+$(document).ready(function () {
 
-$("#save").click(function(){
-    //put editor, display, and title content in variables
-    var editorContent = editor.html();
-    var displayContent = display.html();
-    var titleContent = title.text();
+    var editor = $("#editor");
+    var display = $("#display");
+    var title = $("#title");
 
-    //create new key values and store in localStorage
-    localStorage.editorContent = editorContent;
-    localStorage.displayContent = displayContent;
-    localStorage.titleContent = titleContent;
-});
+    $("#save").click(function(){
+        //put editor, display, and title content in variables
+        var editorContent = editor.html();
+        var displayContent = display.html();
+        var titleContent = title.text();
 
-//if editor content exists in localStorage, load it
-if(localStorage.getItem("editorContent")) {
-    editor.html(localStorage.getItem("editorContent"));
-}
+        //create new key values and store in localStorage
+        localStorage.editorContent = editorContent;
+        localStorage.displayContent = displayContent;
+        localStorage.titleContent = titleContent;
+    });
 
-//if display content exists in localStorage, load it
-if(localStorage.getItem("displayContent")) {
-    display.html(localStorage.getItem("displayContent"))
-}
+    //if editor content exists in localStorage, load it
+    if(localStorage.getItem("editorContent")) {
+        editor.html(localStorage.getItem("editorContent"));
+    }
 
-//if title content exists in localStorage, load it
-if(localStorage.getItem("titleContent")) {
-    title.text(localStorage.getItem("titleContent"))
-}
+    //if display content exists in localStorage, load it
+    if(localStorage.getItem("displayContent")) {
+        display.html(localStorage.getItem("displayContent"))
+    }
 
-//clear key values in localStorage individually and reload page
-$("#reset").click(function(){
-    localStorage.removeItem("editorContent");
-    localStorage.removeItem("displayContent");
-    localStorage.removeItem("titleContent");
-    location.reload();
+    //if title content exists in localStorage, load it
+    if(localStorage.getItem("titleContent")) {
+        title.text(localStorage.getItem("titleContent"))
+    }
+
+    //clear key values in localStorage individually and reload page
+    $("#reset").click(function(){
+        localStorage.removeItem("editorContent");
+        localStorage.removeItem("displayContent");
+        localStorage.removeItem("titleContent");
+        location.reload();
+    });
+
 });
