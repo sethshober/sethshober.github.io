@@ -33,7 +33,7 @@ style[contenteditable] {
 	height: 500px;
 	background: #eee;
 	color: #333;
-	padding: 1em;
+	padding: 1em 2em;
 	margin: 1em;
 	border-radius: 3px;
 	-webkit-box-shadow: inset 0 0 5px #333;
