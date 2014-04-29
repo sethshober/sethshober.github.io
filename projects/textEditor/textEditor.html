@@ -9,7 +9,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <h1 class="center" contenteditable>Text Editor</h1>
+    <h1 class="center" id="title" contenteditable>Text Editor</h1>
 	<div class="pure-g">
         <div class="pure-u-2-5">
             <!--
@@ -19,15 +19,10 @@
     		<div class="editor">
                 <style id="styles" contenteditable>
 
-
 .display {
     background: #eee;
     color: #333;
-    padding: 1em;
-    margin: 1em;
-}
-
-                </style>
+}</style>
     		</div>
             <button id="save" class="button-success pure-button pad-save">Save</button>
             <button id="reset" class="button-secondary pure-button">Reset</button>
@@ -42,24 +37,7 @@
     <footer class="center">Seth</footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-        var editorContent = $("#styles"); 
-
-        $("#save").click(function(){
-            var editedContent = editorContent.html();
-            localStorage.newContent = editedContent;
-        });
-
-        if(localStorage.getItem("newContent")) {
-            editorContent.html(localStorage.getItem("newContent"));
-        }
-
-        $("#reset").click(function(){
-            localStorage.removeItem("newContent");
-            location.reload();
-        });
-
-    </script>
+    <script src="app.js"></script>
 
 </body>
 </html>
