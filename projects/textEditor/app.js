@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
     var editor = $("#editor");
     var display = $("#display");
     var title = $("#title");
@@ -38,5 +36,3 @@ $(document).ready(function () {
         localStorage.removeItem("titleContent");
         location.reload();
     });
-
-});
