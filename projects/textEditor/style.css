@@ -4,16 +4,16 @@
           box-sizing: border-box;
 }
 
-body {
-	font-family: 'Open Sans', sans-serif;
-}
-
 style[contenteditable] {
 	display: block;
 	outline: none;
 	white-space: pre;
 	overflow: auto;
 	height: 500px;
+}
+
+ h1, footer, .editor, .display {
+	font-weight: 300;
 }
 
 .center {
