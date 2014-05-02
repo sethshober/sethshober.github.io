@@ -1,9 +1,15 @@
+//hide save and reset buttons
 $("#save, #reset").hide();
+//slide down note animation
 $("#note").hide().slideDown(800, function(){
+    //fade in save and reset buttons
     $("#save, #reset").fadeIn(function(){
+        //set cursor focus to note
         $("#note").focus();
     });
 });
+
+//CHANGE COLOR
 
 $("#pink").on("click", function() {
     $(".note").css("background","pink");
@@ -24,6 +30,9 @@ $("#blue").on("click", function() {
 $("#orange").on("click", function() {
     $(".note").css("background","orange");
 });
+
+
+// SAVING TO LOCALSTORAGE
 
 var $note = $("#note");
 var $title = $("#title");
