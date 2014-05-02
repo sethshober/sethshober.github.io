@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Notes by Seth</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/base-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="center" id="title" contenteditable>My Note</h1>
+    <div class="pure-g">
+        <div class="pure-u-1-3" style="margin: 0 auto">
+            <div class="note" id="note" contenteditable>
+            </div>
+            <div class="center">
+                <button id="save" class="button-success pure-button">Save</button>
+                <button id="reset" class="button-secondary pure-button">Reset</button>
+            </div>
+        </div>
+    </div>    
+    <footer class="center">Seth</footer>
+    <script src="jquery.js"></script>
+    <script>
+
+        $("#save, #reset").hide();
+        $(".note").hide().slideDown(800, function(){
+            $("#save, #reset").fadeIn(function(){
+                $(".note").focus();
+            });
+        });
+
+        var note = $("#note");
+        var title = $("#title");
+
+        $("#save").click(function(){
+            //put editor, display, and title content in variables
+            var noteContent = note.html();
+            var titleContent = title.text();
+
+            //create new key values and store in localStorage
+            localStorage.noteContent = noteContent;
+            localStorage.titleContent = titleContent;
+        });
+
+        //if display content exists in localStorage, load it
+        if(localStorage.getItem("noteContent")) {
+            note.html(localStorage.getItem("noteContent"))
+        }
+
+        //if title content exists in localStorage, load it
+        if(localStorage.getItem("titleContent")) {
+            title.text(localStorage.getItem("titleContent"))
+        }
+
+        //clear key values in localStorage individually and reload page
+        $("#reset").click(function(){
+            localStorage.removeItem("noteContent");
+            localStorage.removeItem("titleContent");
+            location.reload();
+        });
+
+    </script>
+
+</body>
+</html>
