@@ -11,8 +11,17 @@
 <body>
     <h1 class="center" id="title" contenteditable>My Note</h1>
     <div class="pure-g">
-        <div class="pure-u-1-3" style="margin: 0 auto">
+        <div class="pure-u-1-3">
             <div class="note" id="note" contenteditable>
+            </div>
+            <div class="center colors">
+            <ul>
+                <li><div class="color" id="pink" style="background: pink"></div></li>
+                <li><div class="color" id="green" style="background: seagreen"></div></li>
+                <li><div class="color" id="gray" style="background: #eee"></div></li>
+                <li><div class="color" id="blue" style="background: lightblue"></div></li>
+                <li><div class="color" id="orange" style="background: orange"></div></li>
+            </ul>
             </div>
             <div class="center">
                 <button id="save" class="button-success pure-button">Save</button>
@@ -25,19 +34,39 @@
     <script>
 
         $("#save, #reset").hide();
-        $(".note").hide().slideDown(800, function(){
+        $("#note").hide().slideDown(800, function(){
             $("#save, #reset").fadeIn(function(){
-                $(".note").focus();
+                $("#note").focus();
             });
         });
 
-        var note = $("#note");
-        var title = $("#title");
+        $("#pink").on("click", function() {
+            $(".note").css("background","pink");
+        });
+
+        $("#green").on("click", function() {
+            $(".note").css("background","seagreen");
+        });
+
+         $("#gray").on("click", function() {
+            $(".note").css("background","#eee");
+        });
+
+        $("#blue").on("click", function() {
+            $(".note").css("background","lightblue");
+        });
+
+        $("#orange").on("click", function() {
+            $(".note").css("background","orange");
+        });
+
+        var $note = $("#note");
+        var $title = $("#title");
 
         $("#save").click(function(){
             //put editor, display, and title content in variables
-            var noteContent = note.html();
-            var titleContent = title.text();
+            var noteContent = $note.html();
+            var titleContent = $title.text();
 
             //create new key values and store in localStorage
             localStorage.noteContent = noteContent;
@@ -46,12 +75,12 @@
 
         //if display content exists in localStorage, load it
         if(localStorage.getItem("noteContent")) {
-            note.html(localStorage.getItem("noteContent"))
+            $note.html(localStorage.getItem("noteContent"))
         }
 
         //if title content exists in localStorage, load it
         if(localStorage.getItem("titleContent")) {
-            title.text(localStorage.getItem("titleContent"))
+            $title.text(localStorage.getItem("titleContent"))
         }
 
         //clear key values in localStorage individually and reload page
