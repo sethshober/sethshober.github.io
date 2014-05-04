@@ -11,26 +11,10 @@ $("#note").hide().slideDown(800, function(){
 
 //CHANGE COLOR
 
-$("#pink").on("click", function() {
-    $(".note").css("background","pink");
+$(".color").click(function() {
+    var $divColor = $(this).css("background");
+    $(".note").css("background", $divColor);
 });
-
-$("#green").on("click", function() {
-    $(".note").css("background","seagreen");
-});
-
- $("#gray").on("click", function() {
-    $(".note").css("background","#eee");
-});
-
-$("#blue").on("click", function() {
-    $(".note").css("background","lightblue");
-});
-
-$("#orange").on("click", function() {
-    $(".note").css("background","orange");
-});
-
 
 // SAVING TO LOCALSTORAGE
 
