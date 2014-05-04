@@ -23,12 +23,11 @@ $(".color").click(function() {
 
 var $note = $("#note");
 var $title = $("#title");
-var $note = $(".note");
 
 $("#save").click(function(){
     //put editor, display, and title content in variables
-    var noteContent = $note.html();
     var titleContent = $title.text();
+    var noteContent = $note.html();
     var noteColor = $note.css("background");
 
     //create new key values and store in localStorage
@@ -37,14 +36,14 @@ $("#save").click(function(){
     localStorage.noteColor = noteColor;
 });
 
-//if display content exists in localStorage, load it
-if(localStorage.getItem("noteContent")) {
-    $note.html(localStorage.getItem("noteContent"))
-}
-
 //if title content exists in localStorage, load it
 if(localStorage.getItem("titleContent")) {
     $title.text(localStorage.getItem("titleContent"))
+}
+
+//if display content exists in localStorage, load it
+if(localStorage.getItem("noteContent")) {
+    $note.html(localStorage.getItem("noteContent"))
 }
 
 //if color change exists in localStorage, load it
@@ -54,8 +53,8 @@ if(localStorage.getItem("noteColor")) {
 
 //clear key values in localStorage individually and reload page
 $("#reset").click(function(){
-    localStorage.removeItem("noteContent");
     localStorage.removeItem("titleContent");
+    localStorage.removeItem("noteContent");
     localStorage.removeItem("noteColor");
     location.reload();
 });
