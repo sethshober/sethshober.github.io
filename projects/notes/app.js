@@ -15,7 +15,8 @@ $("#note").hide().slideDown(800, function(){
 //CHANGE COLOR
 $(".color").click(function() {
     var $divColor = $(this).css("background");
-    $(".note").css("background", $divColor);
+    $("#note").css("background", $divColor);
+    $("#note").focus();
 });
 
 
