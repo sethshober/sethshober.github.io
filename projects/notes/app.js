@@ -1,61 +1,63 @@
+var $note = $("#note");
+var $title = $("#title");
+var $save = $("#save");
+var $reset = $("#reset");
+
 // LOAD ANIMATIONS
 
 //hide save and reset buttons
 $("#save, #reset").hide();
 //slide down note animation
-$("#note").hide().slideDown(800, function(){
+$note.hide().slideDown(800, function(){
     //fade in save and reset buttons
     $("#save, #reset").fadeIn(function(){
         //set cursor focus to note
-        $("#note").focus();
+        $note.focus();
     });
 });
 
 
 //CHANGE COLOR
+
 $(".color").click(function() {
     var $divColor = $(this).css("background");
-    $("#note").css("background", $divColor);
-    $("#note").focus();
+    $note.css("background", $divColor);
+    $note.focus();
 });
 
 
 // SAVING TO LOCALSTORAGE
 
-var $note = $("#note");
-var $title = $("#title");
+var note = {};
 
-$("#save").click(function(){
-    //put editor, display, and title content in variables
-    var titleContent = $title.text();
-    var noteContent = $note.html();
-    var noteColor = $note.css("background");
+$save.click(function(){
 
-    //create new key values and store in localStorage
-    localStorage.noteContent = noteContent;
-    localStorage.titleContent = titleContent;
-    localStorage.noteColor = noteColor;
+    note = {
+        "titleText": $title.text(),
+        "noteText": $note.html(),
+        "noteColor": $note.css("background")
+    };
+    
+    //create new key values and store in localStorage. convert object to string.
+    localStorage.setItem('note', JSON.stringify(note));
+
 });
 
-//if title content exists in localStorage, load it
-if(localStorage.getItem("titleContent")) {
-    $title.text(localStorage.getItem("titleContent"))
+//if note exists in localStorage get it and parse from string to object
+if(localStorage.getItem('note')) {
+
+    noteString = localStorage.getItem('note');
+    note = JSON.parse(noteString);
+    $title.text(note.titleText);
+    $note.html(note.noteText);
+    $note.css("background", note.noteColor);
 }
 
-//if display content exists in localStorage, load it
-if(localStorage.getItem("noteContent")) {
-    $note.html(localStorage.getItem("noteContent"))
-}
 
-//if color change exists in localStorage, load it
-if(localStorage.getItem("noteColor")) {
-    $note.css("background", localStorage.getItem("noteColor"))
-}
+//clear key values in localStorage and reload page
+$reset.click(function(){
 
-//clear key values in localStorage individually and reload page
-$("#reset").click(function(){
-    localStorage.removeItem("titleContent");
-    localStorage.removeItem("noteContent");
-    localStorage.removeItem("noteColor");
+    localStorage.removeItem('note');
     location.reload();
+
 });
