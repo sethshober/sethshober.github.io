@@ -1,0 +1,122 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Source Sans Pro', HelveticaNeue-UltraLight, Helvetica, sans-serif;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 9em;
+	margin-top: 75px;
+	line-height: 90%;
+	color: #333;
+}
+
+h2 {
+	font-weight: 200;
+	font-size: 3.75em;
+	color: #888;
+}
+
+.bar {
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	height: 4px;
+	top: -4px;
+	background: white;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.share-box {
+	margin-top: 3em;
+	font-size: 2em;
+	font-weight: 200;
+	max-width: 40.625em;
+}
+
+.share-content[contenteditable] {
+	-webkit-transition: box-shadow 250ms ease;
+       -moz-transition: box-shadow 250ms ease;
+         -o-transition: box-shadow 250ms ease;
+            transition: box-shadow 250ms ease;
+}
+
+.share-content[contenteditable]:focus {
+	-webkit-box-shadow: 0px 0px 5px #31708f;
+       -moz-box-shadow: 0px 0px 5px #31708f;  
+            box-shadow: 0px 0px 5px #31708f;
+}
+
+	.share-content[contenteditable], .share-box .btn {
+		outline: none;
+	}
+
+.share-content {
+	height: 5em;
+	padding: 1em;
+}
+
+.counter {
+	font-weight: 400;
+}
+
+.post-list {
+	margin-top: 5em;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+.heart {
+	color: #666;
+}
+
+.heart:hover{
+	color: #E65050;
+	cursor: pointer;
+}
+
+.hearted {
+	color: #E65050;
+}
+
+.hearted:hover {
+	color: #666;
+	cursor: pointer;
+}
+
+footer {
+	margin-top: 6em;
+	padding: .5em;
+}
+
+textarea {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+	padding: 1em;
+	-webkit-transition: box-shadow 250ms ease;
+       -moz-transition: box-shadow 250ms ease;
+         -o-transition: box-shadow 250ms ease;
+            transition: box-shadow 250ms ease;
+}
+
+/*textarea:focus {
+	-webkit-box-shadow: 0px 0px 5px #31708f;
+       -moz-box-shadow: 0px 0px 5px #31708f;  
+            box-shadow: 0px 0px 5px #31708f;
+}*/
+
+.highlight {
+	-webkit-box-shadow: 0px 0px 5px rgb(91, 192, 222);
+       -moz-box-shadow: 0px 0px 5px rgb(91, 192, 222);  
+            box-shadow: 0px 0px 5px rgb(91, 192, 222);
+	-webkit-transition: box-shadow 250ms ease;
+       -moz-transition: box-shadow 250ms ease;
+         -o-transition: box-shadow 250ms ease;
+            transition: box-shadow 250ms ease;
+}
