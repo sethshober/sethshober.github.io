@@ -4,9 +4,7 @@ $(document).ready(function(){
 
 $('#share').on('focus', function(){
 	$('#panel-share').addClass('highlight');
-})
-
-$('#share').on('focusout', function(){
+}).on('focusout', function(){
 	$('#panel-share').removeClass('highlight');
 })
 
@@ -37,12 +35,23 @@ function addPost () {
 	if($('#share').val().length < 141){
 		post = $('#share').val();
 		$('#posts').prepend("<div id='newPost'>"+post+"</div><span class='heart glyphicon glyphicon-heart'></span><hr>");
-		$('#newPost').hide().slideDown();
+		$('#newPost').hide().toggle('slide');
 		//clear post and reset count
 		$('#share').val('');
 		$('#counter').html('0');
+
+		var moveTo = ($('#posts').offset().top) - 100;
+		$('html, body').animate({scrollTop: moveTo});
+
 	} else {
 		$('#share').effect('shake', {times: 2, distance: 10});
 	}
 
 };
+
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      var id = $(this).attr("href");
+      var divPosition = $(id).offset().top;
+      $("html, body").animate({scrollTop: divPosition});
+    });
