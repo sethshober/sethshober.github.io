@@ -40,7 +40,7 @@ function addPost () {
 		$('#share').val('');
 		$('#counter').html('0');
 
-		var moveTo = ($('#posts').offset().top) - 100;
+		var moveTo = ($('#posts').offset().top) - 50;
 		$('html, body').animate({scrollTop: moveTo});
 
 	} else {
