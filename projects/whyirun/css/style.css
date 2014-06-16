@@ -34,9 +34,14 @@ h2 {
 	margin-right: .5em;
 }
 
-#share {
+#share-button {
 	margin-bottom: .33333em;
 }
+
+/*#share-twitter {
+	font-size: .75em;
+	float: left;
+}*/
 
 .share-box {
 	margin-top: 3em;
