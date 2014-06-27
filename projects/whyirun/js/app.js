@@ -1,6 +1,55 @@
+/*====================================
+=            ON DOM READY            =
+====================================*/
+
+
 $(document).ready(function(){
 	$('#share').focus();
+
+	$('.toggle-nav').click(function() {
+        // Calling a function in case you want to expand upon this.
+        toggleNav();
+    });
 });
+
+
+/*========================================
+=            CUSTOM FUNCTIONS            =
+========================================*/
+function toggleNav() {
+    if ($('#site-wrapper').hasClass('show-nav')) {
+        // Do things on Nav Close
+        $('#site-wrapper').removeClass('show-nav');
+        $('#bar').addClass('bar');
+    } else {
+        // Do things on Nav Open
+        $('#site-wrapper').addClass('show-nav');
+        $('#bar').removeClass('bar');
+    }
+
+    //$('#site-wrapper').toggleClass('show-nav');
+}
+
+//escape key closes Nav
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+        if ($('#site-wrapper').hasClass('show-nav')) {
+            // Assuming you used the function I made from the demo
+            toggleNav();
+        }
+    } 
+});
+
+// show Nav button
+// $(window).scroll(function() {
+// 	var distanceFromTop = $(this).scrollTop();
+// 	if(distanceFromTop > 25) {
+// 		$('#menu-button').removeClass('hidden');
+// 	} else {
+// 		$('#menu-button').addClass('hidden');
+// 	}
+// });
+
 
 $('#share').on('focus', function(){
 	$('#panel-share').addClass('highlight');

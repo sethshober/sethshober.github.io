@@ -1,0 +1,174 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Challenge for Snapflow</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<link rel="stylesheet" href="css/jqplot.css">
+</head>
+<style>
+
+
+	* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+	*:before,
+	*:after {
+	  -webkit-box-sizing: border-box;
+	     -moz-box-sizing: border-box;
+	          box-sizing: border-box;
+	}
+
+	body {
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004); /* font smoothing hack */
+}
+
+
+
+	.heading {
+		text-align: center;
+		margin-bottom: 5em;
+	}	
+
+	.pure-g-r {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 1em;
+	}
+
+	code {
+		color: darkblue;
+	}
+
+	pre {
+		color: darkblue;
+	}
+
+	body {
+		font-weight: 300;
+	}
+
+	h1,h2 {
+		font-weight: 700;
+	}
+
+	.question {
+		margin-bottom: 5em;
+	}
+
+	.question h3 {
+		margin-bottom: 2em;
+	}
+
+	.question p {
+		margin-top: 4em;
+		font-size: 1.2em;
+	}
+</style>
+<body>
+
+<div class="pure-g-r">
+	<div class="pure-u-1 pure-u-md-3-4">
+		<div class="heading">
+			<h1>Snapflow Code Challenge</h1>
+			<h2>Completed by Seth Shober</h2>
+		</div>
+		<div class="question">
+			<h3>What color should the text in the paragraph be and why?</h3>
+			<code>&lt;style&gt;</code>
+				<pre>	#myID {color:red};<br>	.myClass {color:blue};<br>	p {color: green};</pre>
+			<code>&lt;/style&gt;</code><br>
+			<code>&lt;body&gt;</code>
+				<pre>	<code>&lt;p&gt;id="myID" class="myClass">text inside&lt;/p&gt;</code></pre>
+			<code>&lt;/body&gt;</code>
+			<p>The color will be red because myID has the highest specificity. Class selectors will overrule element selectors and ID selectors will overrules classes.</p>
+		</div>
+
+		<div class="question">
+			<h3>Why would this code not work as expected? Is anything missing?</h3>
+			<pre><code>function User(name) {<br>	this.name = name;<br>};<br><br>var j = User('Jack');<br>alert(j.name);</code></pre>
+			<p>To create a new User object from the prototype User you need the keyword 'new'.</p>
+		</div>
+
+		<div class="question">
+			<h3>Why does the second alert say undefined?</h3>
+			<code>&lt;style&gt;</code>
+				<pre>	#myID {color:red};<br>	.myClass {color:blue};<br>	p {color: green};</pre>
+			<code>&lt;/style&gt;</code>
+			<code>&lt;body&gt;</code>
+				<pre>	<code>&lt;p&gt;id="myID" class="myClass">text inside&lt;/p&gt;</code></pre>
+			<code>&lt;/body&gt;</code>
+			<p>Inside the setTimeout function 'this' is referring to setTimeout, which of course has no innerHTML.</p>
+		</div>
+
+
+
+		<div id="chartdiv" style="height:500px;width:800px; "></div>
+
+
+	</div>
+</div>
+
+<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
+<script src="js/jquery.js"></script>
+<script src="js/jqplot.js"></script>
+<!-- <script src="js/jqplot.canvasTextRenderer.js"></script>
+<script src="js/jqplot.canvasAxisLabelRenderer.js"></script> -->
+
+
+<script>
+	
+	//function to calculate fibonacci numbers
+	function fibonacci() {
+		var valOne,
+			valTwo,
+			valvalAdd;
+		var fibArr = [];
+
+		//loop 50 fibonacci number iterations
+		for(var i = 0; i <50; i++){
+			//arbitrarily add first #
+			if(i === 0) {
+				valOne = 0;
+				valTwo = 1;
+				console.log(0); //for testing
+				fibArr.push([0,0]);
+				continue;
+			}
+			//arbitrarily add second #
+			if(i === 1) {
+				valOne = 0;
+				valTwo = 1;
+				console.log(1); //for testing
+				fibArr.push([1,1]);
+				continue;
+			}
+			//
+			valAdd = valOne + valTwo;
+			valOne = valTwo;
+			valTwo = valAdd;
+			console.log(valAdd); //for testing
+			//add value to array as x,y coordinate
+			fibArr.push([i, valAdd]);
+		}
+		return fibArr;
+	}
+
+	var fibonacci = fibonacci();
+	console.log(fibonacci); //for testing
+
+	//plot to chart
+	$.jqplot('chartdiv',  [fibonacci],
+		{ title: 'Fibonacci',
+		  axes: {yaxis:{min:0}},
+		  series: [{color: 'seagreen'}]
+	});
+
+	// $.jqplot('chartdiv',  [[[1, 2],[3,5.12],[5,13.1],[7,33.6],[9,85.9],[11,219.9]]]);
+
+</script>
+
+</body>
+</html>
