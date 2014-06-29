@@ -15,35 +15,30 @@ function fibonacci() {
 		if(i === 0) {
 			valOne = 0;
 			valTwo = 1;
-			console.log(0); //for testing
-			fibArr.push([0,0]);
-			continue;
-		}
-		//arbitrarily add second #
-		if(i === 1) {
-			valOne = 0;
-			valTwo = 1;
-			console.log(1); //for testing
+			//for testing
+			console.log(1);
+			//add fibonacci number to array x,y coordinate
 			fibArr.push([1,1]);
 			continue;
 		}
-		//
+		//adjust variables up in sequence
 		valAdd = valOne + valTwo;
 		valOne = valTwo;
 		valTwo = valAdd;
-		console.log(valAdd); //for testing
-		//add value to array as x,y coordinate
+		//for testing
+		console.log(valAdd);
+		//add fibonacci number to array as x,y coordinate
 		fibArr.push([i, valAdd]);
 	}
 	return fibArr;
 }
 
 var fibonacci = fibonacci();
-console.log(fibonacci); //for testing
+//console.log(fibonacci); //for testing
 
-//plot to chart.
+//plot to chart. very nice hockey stick curve.
 $.jqplot('chart-div',  [fibonacci],
-	{ title: 'Fibonacci Numbers',
+	{ title: 'Fibonacci Numbers for 50 Iterations',
 	  axes: {
 	  			yaxis:{min:0, label:"Fibonacci Number"},
 	         	xaxis:{min:0, label:"Iteration"}
@@ -62,20 +57,21 @@ div.insertAdjacentHTML('afterend', '<select id="select"></select>')
 //get select
 var select = document.getElementById('select');
 //list items
-var selectOptions = ["Bananas", "Oranges", "Apples", "Pears", "Kiwis", "Grapes"];
+var selectOptions = ["Goldeneye", "Bomberman", "Super Smash Bros", "Mario Kart", "Star Wars: Shadows of the Empire", "Diddy Kong Racing", "Starfox", "Donkey Kong 64"];
 for(var i = 0; i < selectOptions.length; i++) {
 	//convert array selection to string
-	fruit = selectOptions[i].toString();
+	game = selectOptions[i].toString();
 	//for testing
-	console.log(fruit);
+	console.log(game);
 	//create <option> and append to DOM
-	select.insertAdjacentHTML('beforeend', '<option value='+fruit+'>'+fruit+'</option>')
+	select.insertAdjacentHTML('beforeend', '<option value='+game+'>'+game+'</option>')
 }
 
 
 //function call when select is changed
 $( "#select" ).change(function() {
-	var selected = $(this).val();
+	//grab option as text
+	var selected = $("#select option:selected").text();
 	//print selected value
 	$('#select-output').hide().html(selected).fadeIn();
 });

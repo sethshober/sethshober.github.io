@@ -3,7 +3,7 @@
 
 #chart-div {
 	height: 500px;
-	width: 800px
+	width: 800px;
 }
 
 /* MY STYLES */
@@ -25,7 +25,7 @@ h1,h2 {
 .pure-g-r {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 1em;
+	padding: .8em;
 }
 
 .pure-button {
