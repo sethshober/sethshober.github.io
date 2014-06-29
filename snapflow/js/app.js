@@ -61,8 +61,6 @@ var selectOptions = ["Goldeneye", "Bomberman", "Super Smash Bros", "Mario Kart",
 for(var i = 0; i < selectOptions.length; i++) {
 	//convert array selection to string
 	game = selectOptions[i].toString();
-	//for testing
-	console.log(game);
 	//create <option> and append to DOM
 	select.insertAdjacentHTML('beforeend', '<option value='+game+'>'+game+'</option>')
 }
