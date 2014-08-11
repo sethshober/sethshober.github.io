@@ -1,0 +1,54 @@
+body {
+	background: #eee;
+	font-family: 'Varela Round', sans-serif;
+}
+
+h1 {
+	margin-bottom: .1em;
+}
+
+h2 {
+	margin-top: .1em;
+}
+
+.wrapper {
+	background: #fff;
+	border-radius: 10px;
+	margin: 1em;
+	padding: 1em;
+}
+
+.title-content {
+	margin-bottom: 2em;
+}
+
+.search {
+	display: block;
+	width: 100%;
+	margin-top: .5em;
+}
+
+.photo {
+	margin-top: 1em;
+	width: 100%;
+}
+
+.center	{
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+	.search {
+		display: inline;
+		width: auto;
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.wrapper {
+		margin: 5em;
+		padding: 2.5em;
+	}
+}
+
