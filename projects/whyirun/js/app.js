@@ -51,51 +51,80 @@ $(document).keyup(function(e) {
 // });
 
 
-$('#share').on('focus', function(){
-	$('#panel-share').addClass('highlight');
-}).on('focusout', function(){
-	$('#panel-share').removeClass('highlight');
-})
 
-$('#share').keyup(function() {
-	//count share characters and bind to counter display
-		var count = $(this).val().length;
-		$('#counter').html(count);
+	$('#share').on('focus', function(){
+		$('#panel-share').addClass('highlight');
+	}).on('focusout', function(){
+		$('#panel-share').removeClass('highlight');
+	})
 
-		//change counter color
-		if(count > 140 ) {
-		$('#counter').css("color", "red");
-	} else {
-		$('#counter').css("color", "green");
-	}
-});
+	$('#share').keyup(function() {
+		//count share characters and bind to counter display
+			var count = $(this).val().length;
+			$('#counter').html(count);
 
-// $('.heart').click(function() {
-// 	$(this).removeClass("heart").addClass("hearted");
-// })
+			//change counter color
+			if(count > 140 ) {
+			$('#counter').css("color", "red");
+		} else {
+			$('#counter').css("color", "green");
+		}
+	});
 
-// $('.hearted').click(function() {
-// 	$(this).removeClass("hearted").addClass("heart");
-// })
+	//switch out heading (this is the vision)
+	// var headingWords = [" I Backpack", " I Love My Dog", " I Bake", " I Play the Ukele", " I'm a Cheese Taster", " I'm a Mohawk Enthusiast"];
+	// setInterval(function(){
+	// 	if(true){
+	// 		var changeWord = headingWords[Math.floor(Math.random()*headingWords.length)];	
+	// 		$("#changeWord").html(changeWord).hide().fadeIn();
+	// 	}
+	// }, 5000);
 
 
-//share button add post to post listing
-function addPost () {
-	if($('#share').val().length < 141){
-		post = $('#share').val();
-		
-		//clear post and reset count
-		$('#share').val('');
-		$('#counter').html('0');
+	// $('.heart').on("click", function() {
+	// $(this).removeClass("heart").addClass("hearted");
+	// })
 
-		var moveTo = ($('#posts').offset().top) - 50;
-		$('html body').animate({scrollTop: moveTo}, function(callback) {
-			$('#posts').prepend("<div id='newPost'>"+post+"</div><span class='heart glyphicon glyphicon-heart' id='newHeart'></span><hr>");
-			$('#newPost').hide().toggle('slide');
-		});
+	// $('.hearted').on("click", function() {
+	// 	$(this).removeClass("hearted").addClass("heart");
+	// })
 
-	} else {
-		$('#share').effect('shake', {times: 2, distance: 10});
-	}
 
-};
+	
+	//share button add post to post listing
+	function addPost () {
+		if($('#share').val().length < 141){
+			var post = $('#share').val();
+			
+			//clear post and reset count
+			$('#share').val('');
+			$('#counter').html('0');
+
+			$('.post-list').prepend("<div class='post' id='newPost'><p class='text-center post-content'>" + post + "</p><span class='hearted glyphicon glyphicon-heart'></span></div>");
+			//$('#newPost').hide().fadeIn();
+
+			var moveTo = ($('.post-list').offset().top) - 50;
+			$('html body').animate({scrollTop: moveTo});
+
+		} else {
+			$('#share').effect('shake', {times: 2, distance: 10});
+		}
+
+	};
+
+	//show like button on desktop and large desktop
+	if($(window).width() > 992){
+		$(".post").hover(  
+		        function(){
+		        	$('.hearted').stop(true,true).animate({top: 25}, 100);  
+		        },  
+		        function(){
+		        	$('.hearted').stop(true,true).animate({top: -20}, 100);  
+			});
+		}
+
+
+
+
+
+
