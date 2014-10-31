@@ -268,9 +268,14 @@ ul.inline-list {
 	padding-top: 0;
 }
 
-.label.green {
+.label-job.label.green {
     background-color: #49695f;
     color: white; 
+}
+
+.label-job.label.orange {
+	background-color: #fbb147;
+    color: white;
 }
 
 /* ====================== SKILLS CONTENT ================== */
@@ -288,19 +293,28 @@ ul.inline-list {
 		color: #333;
 	}
 
+.label.green {
+	border: 1.5px solid #49695f;
+    background: transparent;
+    color: #49695f; 
+}
+
 .label.orange {
-	background-color: #fbb147;
-    color: white;
+	border: 1.5px solid #fbb147;
+	background: transparent;
+    color: #fbb147;
 }
 
 .label.black {
-	background-color: #444;
-    color: white;
+	border: 1.5px solid #444;
+	background: transparent;
+    color: #444;
 }
 
-.label.mint {
-	background-color: #3cfba3;
-    color: white;
+.label.blue {
+	border: 1.5px solid #0cf;
+	background: transparent;
+    color: #0cf;
 }
 
 .label-skill {
@@ -343,6 +357,11 @@ ul.inline-list {
 	padding: .75em;
 	font-size: 1.5em;
 	width: 50%;
+}
+
+.label-passion.label.black {
+	background-color: #444;
+    color: white;
 }
 
 .passions-pic {
