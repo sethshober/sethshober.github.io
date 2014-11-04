@@ -95,27 +95,28 @@ body {
 
 .intro-main > h1 {
 	margin-top: 0;
+	margin-bottom: 0;
 	padding-top: 0;
 	font-size: 7em;
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 	color: #fff;
 	font-weight: 400;
 }
 
 	.intro-main > h2 {
-		text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 		color: #efefef;
 		font-size: 2em;
 		font-weight: 300;
 	}
 
 .hire-me {
-	margin-top: 5em;
+	margin-top: 2.5em;
 	background: transparent;
 	color: #eee;
-	border: solid 1.5px #bbb;
+	border: solid 1.75px #bbb;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.25em;
+	font-size: 2em;
 
 	-webkit-transition: color 750ms ease;	/* really cool button hover transition */
        -moz-transition: color 750ms ease;
@@ -126,7 +127,7 @@ body {
 	.hire-me:hover, .hire-me:focus {
 		background-color: #eee;
 		color: #49695f;
-		border: solid 1.5px #eee;
+		border: solid 1.75px #eee;
 	}
 
 	.hire-me i {
@@ -484,6 +485,7 @@ footer {
 
 	.hire-me {
 		margin-top: 2.5em;
+		font-size: 1.5em;
 	}
 
 	.hire-me {
