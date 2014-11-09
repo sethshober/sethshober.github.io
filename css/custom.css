@@ -210,6 +210,10 @@ body {
             transition: color 500ms ease, border 500ms ease;
 }
 
+#coverLetterModal p {
+	line-height: 1.7;
+}
+
 .cover-letter:hover {
 	background: transparent;
 	color: #111;
@@ -246,6 +250,10 @@ ul.inline-list {
 	padding-bottom: 2em;
 }
 
+	.job p {
+		line-height: 1.75;
+	}
+
 .text-mute {
 	color: #888;
 }
@@ -271,12 +279,14 @@ ul.inline-list {
 
 .label-job.label.green {
     background-color: #49695f;
-    color: white; 
+    color: white;
+    border: none;
 }
 
 .label-job.label.orange {
 	background-color: #fbb147;
     color: white;
+    border: none;
 }
 
 /* ====================== SKILLS CONTENT ================== */
@@ -295,15 +305,15 @@ ul.inline-list {
 	}
 
 .label.green {
-	border: 1.5px solid #49695f;
+	border: 1.5px solid #53807F;
     background: transparent;
-    color: #49695f; 
+    color: #53807F; 
 }
 
 .label.orange {
-	border: 1.5px solid #fbb147;
+	border: 1.5px solid #FF8040;
 	background: transparent;
-    color: #fbb147;
+    color: #FF8040;
 }
 
 .label.black {
