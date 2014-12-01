@@ -93,14 +93,15 @@ $(document).keyup(function(e) {
 	
 	//share button add post to post listing
 	function addPost () {
-		if($('#share').val().length < 141){
+		postlen = $('#share').val().length;
+		if(postlen > 0 && postlen < 141){
 			var post = $('#share').val();
 			
 			//clear post and reset count
 			$('#share').val('');
 			$('#counter').html('0');
 
-			$('.post-list').prepend("<div class='post' id='newPost'><p class='text-center post-content'>" + post + "</p><span class='hearted glyphicon glyphicon-heart'></span></div>");
+			$('.post-list').prepend("<div class='post' id='newPost'><p class='text-center post-content id='101'>" + post + "</p><span class='hearted glyphicon glyphicon-heart'></span></div>");
 			//$('#newPost').hide().fadeIn();
 
 			var moveTo = ($('.post-list').offset().top) - 50;
@@ -116,10 +117,12 @@ $(document).keyup(function(e) {
 	if($(window).width() > 992){
 		$(".post").hover(  
 		        function(){
-		        	$('.hearted').stop(true,true).animate({top: 25}, 100);  
+		        	$('.hearted').stop(true,true).animate({top: 25}, 100);
+		        	$(this).css('background', 'rgba(0,0,0,0.75)');  
 		        },  
 		        function(){
-		        	$('.hearted').stop(true,true).animate({top: -20}, 100);  
+		        	$('.hearted').stop(true,true).animate({top: -20}, 100);
+		        	$(this).css('background', '#23748E');
 			});
 		}
 
