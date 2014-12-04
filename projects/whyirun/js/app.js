@@ -101,7 +101,7 @@ $(document).keyup(function(e) {
 			$('#share').val('');
 			$('#counter').html('0');
 
-			$('.post-list').prepend("<div class='post' id='newPost'><p class='text-center post-content>" + post + "</p><span class='hearted glyphicon glyphicon-heart'></span></div>");
+			$('.post-list').prepend("<div class='post' id='newPost'><p class='text-center post-content'>" + post + "</p><span class='hearted glyphicon glyphicon-heart'></span></div>");
 			//$('#newPost').hide().fadeIn();
 
 			var moveTo = ($('.post-list').offset().top) - 50;
