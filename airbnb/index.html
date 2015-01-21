@@ -119,18 +119,19 @@
 		          border-radius: 3px;
 		  display: block;
 		  max-width: 500px;
-		  background-color: #aaaaaa;
+		  background-color: #ff5a5f;
 		  color: #ffffff;
-		  -webkit-transition: background 200ms ease-out;
-		     -moz-transition: background 200ms ease-out;
-		          transition: background 200ms ease-out;
+		  -webkit-transition: box-shadow 150ms;
+		     -moz-transition: box-shadow 150ms;
+		          transition: box-shadow 150ms;
 		}
 
 		button:hover, 
 		button:focus, 
 		.button:hover, 
 		.button:focus {
-		    background: #ff5a5f;
+		        -moz-box-shadow: inset 0px 0px 12px 0px rgba(0,0,0,0.50);
+    				 box-shadow: inset 0px 0px 12px 0px rgba(0,0,0,0.50);
 		}
 
 		footer {
