@@ -190,6 +190,7 @@ body {
 }
 
 	.section-experience h3 {
+		font-size: 1.8em;
 		color: #49695f;
 	}
 
@@ -227,7 +228,7 @@ body {
 }
 
 ul.inline-list {
-	margin-bottom: .5em;
+	margin-bottom: .25em;
 }
 
 .inline-list > li {
@@ -287,6 +288,10 @@ ul.inline-list {
 	background-color: #fbb147;
     color: white;
     border: none;
+}
+
+.job-dash {
+	color: #fbb147;
 }
 
 /* ====================== SKILLS CONTENT ================== */
