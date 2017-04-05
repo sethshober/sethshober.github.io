@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: emitter.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: emitter.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict'
+
+/**
+ * @class EventEmitter
+ * @description
+ * An EventEmitter is responsible for managing a set of listeners and publishing
+ * events to them when it is told that such events happened. The following is a
+ * very basic EventEmitter class
+ */
+class EventEmitter {
+  /**
+  * @constructor
+  */
+  constructor() {
+    this.events = {}
+  }
+
+
+  /**
+   * Adds a listener to be invoked when events of the specified type are
+   * emitted.
+   *
+   * @param {string}   event    Name of the event to listen to
+   * @param {function} listener Function to invoke when the specified event
+   *                            is emitted
+   */
+  addListener(event, listener) {
+    const events = this.events
+    if (typeof listener === 'function') {
+      if (events.hasOwnProperty(event) &amp;&amp; Array.isArray(events[event])) {
+        this.listeners(event).push(listener)
+      } else {
+        events[event] = [listener] 
+      }
+    }
+  }
+
+
+  /**
+   * Alias to addListener
+   */
+  on(event, listener) {
+    this.addListener(event, listener)
+  }
+
+
+  /**
+   * Removes a registered listener from the emitter.
+   *
+   * @param {string}   event    Name of the event listening to
+   * @param {function} listener Function to remove
+   */
+  removeListener(event, listener) {
+    const events = this.events
+    let listeners
+    let listenerString
+    if (typeof listener === 'function' &amp;&amp;
+        events.hasOwnProperty(event) &amp;&amp;
+        Array.isArray(events[event])) {
+      
+      listeners = this.listeners(event)
+      listenerString = listener.toString()
+      for (let i = 0; i &lt; listeners.length; i++) {
+        if (listeners[i].toString() === listenerString) {
+          listeners.splice(i, 1)
+        }
+      }
+    }
+  }
+
+
+  /**
+   * Removes all of the registered listeners, including those registered as
+   * listener maps.
+   *
+   * @param {string} event Name of the event to remove listeners from
+   */
+  removeAllListeners(event) {
+    const events = this.events
+    if (events.hasOwnProperty(event)) {
+      events[event] = []
+    }
+  }
+
+
+  /**
+   * Emits an event of the given type with the given data. All handlers of that
+   * particular type will be notified.
+   *
+   * @param {string} event Name of the event to emit
+   * @param {*}            Arbitrary arguments to be passed to each
+   *                       registered listener
+   *
+   * @example
+   *   emitter.addListener('someEvent', (message) => {
+   *     console.log(message)
+   *   })
+   *
+   *   emitter.emit('someEvent', 'hello') // logs 'hello'
+   */
+  emit(event) {
+    const events = this.events
+    const args = Array.prototype.slice.call(arguments, 1)
+    let listeners
+
+    if (events.hasOwnProperty(event) &amp;&amp; Array.isArray(events[event])) {
+      // create a shallow copy
+      listeners = this.listeners(event).slice()
+
+      for (let i = 0; i &lt; listeners.length; i++) {
+        // The subscription may have been removed during this event loop.
+        if (listeners[i]) {
+          listeners[i].apply(this, args)
+        }
+      }
+    }
+  }
+
+
+  /**
+   * Much like addListener, except the listener is removed after being invoked.
+   *
+   * @param {string}   event    Name of the event to listen to
+   * @param {function} listener Function to invoke only once when the given
+   *                            event is emitted
+   */
+  once(event, listener) {
+    const emitter = this
+    emitter.on(event, function listenerWrapper() {
+      emitter.removeListener(event, listenerWrapper)
+      listener.apply(emitter, arguments)
+    })
+  }
+
+
+  /**
+   * Returns an array of listeners that are currently registered for the given
+   * event.
+   *
+   * @param  {string} event Name of the event to query
+   * @return {array}
+   */
+  listeners(event) {
+    return this.events.hasOwnProperty(event) ? this.events[event] : []
+  }
+
+}
+
+
+module.exports = EventEmitter
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="EventEmitter.html">EventEmitter</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Apr 05 2017 14:06:56 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
