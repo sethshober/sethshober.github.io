@@ -1,320 +1,71 @@
-<!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hi there. I'm Seth.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script type="text/javascript">
+window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);
+;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"6e3084a857",applicationID:"17875377",sa:1}
+</script>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello. I'm Seth. I do UI/UX and web development.</title>
-  <meta name="description" content="Hello everybody. My name is Seth Shober, and I'm a web developer passionate about user experience. I'm looking to work with a passionate team, building something that matters. Please, come on in to see why I should be your next hire.">
-  <meta name="author" content="Seth Shober">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <!-- New Relic -->
-  <script type="text/javascript">
-window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(13),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,-1!==o.indexOf("dev")&&(s.dev=!0),-1!==o.indexOf("nr_dev")&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f?f.apply(this,a(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(14),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(7),t(6),"addEventListener"in window&&t(4),c.xhrWrappable&&t(8),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(7),s=t(6);t("loader").features.stn=!0,t(5);var c=NREUM.o.EV;o.on("fn-start",function(t,e){var n=t[0];n instanceof c&&(this.bstStart=Date.now())}),o.on("fn-end",function(t,e){var n=t[0];n instanceof c&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),s.on("fn-start",function(){this.bstStart=Date.now()}),s.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on("pushState-start",function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on("pushState-end",function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",r,!1),document.addEventListener("keypress",r,!1),document.addEventListener("click",r,!1)}},{}],4:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(15)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],5:[function(t,e,n){var r=t("ee").get("history"),o=t(15)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],6:[function(t,e,n){var r=t("ee").get("raf"),o=t(15)(r);e.exports=r,o.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],7:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(15)(i);e.exports=i,a.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),a.inPlace(window,["setInterval"],"setInterval-"),a.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),i.on("setInterval-start",r),i.on("setTimer-start",o)},{}],8:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",s)}function i(t){w.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<w.length;t++)r([],w[t]);w.length&&(w=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(4);var f=t("ee"),u=f.get("xhr"),d=t(15)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],w=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],9:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;l>r;r++)t.removeEventListener(d[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return i(r)}function i(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}function a(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(10),u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(12),m=window.XMLHttpRequest;s.features.xhr=!0,t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||10>h)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},a(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var a=i(r);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;l>s;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],10:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],11:[function(t,e,n){function r(t,e){return function(){o(t,[(new Date).getTime()].concat(a(arguments)),null,e)}}var o=t("handle"),i=t(13),a=t(14);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var s=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(s,function(t,e){newrelic[e]=r(f+e,"api")}),i(c,function(t,e){newrelic[e]=r(f+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),o("err",[t,(new Date).getTime()])}},{}],12:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],13:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],14:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],15:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(14),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);var u=f[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},w={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return w}function i(){return new r}var a="nr@context",s=t("gos"),c=t(13),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!m++){var t=h.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(l,function(e,n){t[e]||(t[e]=n)});var n="https"===d.split(":")[0]||t.sslForHttp;h.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=h.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(13),f=window,u=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(11);var d=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},p=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),h=e.exports={offset:a(),origin:d,features:{},xhrWrappable:p};u.addEventListener?(u.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(u.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),s("mark",["firstbyte",a()],null,"api");var m=0},{}]},{},["loader",2,9,3]);
-  ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"6e3084a857",applicationID:"17875377",sa:1,agent:"js-agent.newrelic.com/nr-918.min.js"}
-  </script> <!-- End New Relic -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-42330113-2', 'sethshober.com');
-    ga('send', 'pageview');
-  </script>
-  <link rel="stylesheet" href="css/framework.css">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-  <script src="js/modernizr.js"></script>
-</head>
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
 
-<body>
+			<div id="wrapper">
 
-<!-- HELLO AND WELCOME! -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/me.jpg" alt="" /></span>
+							<h1>Seth Shober</h1>
+							<h2>Web Engineer <span class="bold">@ </span><img src="images/Glogo.png" alt="" id="g-logo"/></h2>
+							<hr>
+							<h2 id="believe-heading">What I Believe</h2>
+				      <div>
+				        <ul id="believe-list">
+				          <li>Start with 'WHY'.</li>
+				          <li>Be passionate.</li>
+				          <li>Do something that matters.</li>
+				          <li>Be different.</li>
+				          <li>Never stop learning.</li>
+				          <li>Help Others.</li>
+				          <li>Teach.</li>
+				          <li>Listen.</li>
+				          <li>Anything is possible.</li>
+				          <li>Get outside.</li>
+				        </ul>
+				      </div>  
+						</header>
+						<footer>
+							<ul class="icons">
+								<li><a href="https://github.com/sethshober" class="fa-github" target="_blank">Instagram</a></li>
+								<li><a href="https://www.linkedin.com/in/sethshober/" class="fa-linkedin" target="_blank">Facebook</a></li>
+								<li><a href="https://learnjswith.me/" class="fa-book" target="_blank">JavaScript Blog</a></li>
+							</ul>
+						</footer>
+					</section>
 
-<!--================================================================= START NAVIGATION -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Seth Shober</li>
+							<li>circa 2018</li>
+						</ul>
+					</footer>
 
-<div class="contain-to-grid fixed">
-  <nav class="top-bar" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <a href=""></a>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
-    </ul>
+			</div> <!-- end wrapper -->
 
-    <section class="top-bar-section">
-      <ul>
-        <li><a href="#about" class="scroll">About</a></li>
-        <li><a href="#experience" class="scroll">Experience</a></li>
-        <li><a href="#passions" class="scroll">Passions</a></li>
-        <li><a href="#connect" class="scroll">Connect</a></li>
-        <li><a href="https://learnjswith.me/" target="_blank">JS Blog</a></li>
-        <li><a href="http://learntheterminal.com/" target="_blank">Learn the Terminal</a></li>
-        <li><a href="http://www.inspired.run/" target="_blank">Run Inspired</a></li>
-      </ul>
-    </section>
-  </nav>
-</div>
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
 
-<!--========================================================== END NAVIGATION -->
-<!--========================================================== START MAIN CALLOUT & PICTURE -->
-  
-  <div class="picture-main">
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="intro-main">
-          <h1 class="fit-name">Hi.&nbsp;I'm&nbsp;Seth.</h1>
-          <h2 class="fit-title">UI/UX | Web Developer</h2>
-          <!-- <a href="mailto:seth.shober@gmail.com?subject=Seth, you've caught my attention." target="_blank" class="button hire-me" id="hire-me">Hire Me!<i class="fi-like"></i></a> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!--============================================================== END MAIN CALLOUT & PICTURE -->
-<!--============================================================== START ABOUT ME -->
-
-<div class="section-about" id="about">
-  <div class="row">
-    <div class="small-12 large-8 large-centered columns">
-      <h2 class="text-center fit-b negative">What I Believe</h2>
-      <hr class="divide-header">
-      <div>
-        <ul class="believe text-center">
-          <li>Start with WHY?</li>
-          <li>Be passionate.</li>
-          <li>Do something that matters.</li>
-          <li>Be different.</li>
-          <li>Never stop learning.</li>
-          <li>Help Others.</li>
-          <li>Teach.</li>
-          <li>Listen.</li>
-          <li>Anything is possible.</li>
-          <li>Get outside.</li>
-        </ul>
-      </div>  
-      <blockquote class="quote-about">You only have to remember that what you've done in your life may change what someone's doing in their life. And it changes everything.<cite class="cite-about">AVA</cite></blockquote>
-    </div>
-  </div>  
-</div>
-
-<!--=========================================================== END ABOUT ME -->
-<!--=========================================================== START EXPERIENCE -->
-
-<div class="section-experience" id="experience">
-  <div class="row">
-    <div class="small-12 medium-centered columns width">
-      <h2 class="text-center fit-b negative">What I've Done</h2>
-      <hr class="divide-header">
-      <a href="#" data-reveal-id="coverLetterModal" data-reveal class="cover-letter button radius">READ MY COVER LETTER</a>
-      <div id="coverLetterModal" class="reveal-modal" data-reveal>
-        <div class="reveal-modal-inner">
-          <p class="lead">Greetings!</p>
-          <p>I’m looking to join a team that shares my passion to solve problems and build things. I love to learn and am confident that with my focus and discipline I can do anything.</p>
-          <p>I believe in building things that are useful. I design and write code with an intense focus on user experience and customer satisfaction. I am constantly learning the newest technologies and best practices, and am active in the community and meetups, finding value in the collaboration with others solving similar problems. I'm a unicorn, who knows how to validate an idea, design it, and then build it from front to back, and when it's ready, I'll put on my business hat and take it to market.</p>
-          <p>Pair all this with the fact that I am an Appalachian Trail thru-hiker and Eagle Scout, with some pretty gnarly and invaluable life experiences, and we might just have a fit.</p>
-          <p>Let’s talk soon and see where it leads. </p>
-          <br/>
-          <p>Cheers!</p>
-          <br/>
-          <a href="mailto:seth.shober@gmail.com" class="button">Email Me</a>
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-      </div>
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Web Developer</h3></li>
-        </ul>
-        <p class="text-current">I believe in building things that are useful. I design and write code with an intense focus on user experience and client satisfaction. I am constantly learning the newest technologies and best practices, and am active in the community and meetups, finding value in the collaboration with others solving similar problems. I know how to validate an idea, design it, and then build it from front to back, and when it's ready, I'll put on my business hat and take it to market.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Technical Support Engineer <span class="job-dash">-</span> New Relic</h3></li>
-        </ul>
-        <p class="text-mute">At New Relic I work to create the best customer experience, while reducing friction between support and engineering. This entails code level support across many products, where I am a Node and JavaScript expert and Engineering liaison, working directly with engineering teams to reproduce issues and write scripts and tests, in order to simultaneously improve both the customer experience and our product. I provide Sales Engineering support, which has resulting in several large closed deals, and have authored a training framework utilized across Support teams for individual products
-        <br/>
-        <br/>
-        In addition, I identify, track, and prioritize bugs and feature requests, as well as code bug fixes. I also create internal and external documentation to increase knowledge for customers and our teams, resulting in a better experience and decreased customer support load. With the remaining free time I have, I continue to learn the latest technologies in order to become more valuable to the team and company.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Teaching Assistant <span class="job-dash">-</span> Portland Code School</h3></li>
-        </ul>
-        <p class="text-mute">I love to learn and share knowledge. At PCS I helped to teach web development foundations, including HTML, CSS, JavaScript, jQuery, Git, and the Terminal. I was able to provide students the tools necessary to continue their learning in a self-taught fashion, and prepare them with the skills and mindset for success into the future.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Co-Founder <span class="job-dash">-</span> Donation Digital</h3></li>
-        </ul>
-        <p class="text-mute">Donation  Digital is a three man project I co-founded. It is a digital music platform that connects users with charities. I am the project manager, in which I prepared all the preliminary research in order to understand the industry and develop a business plan. I contacted major labels and aggregators to conduct business. We ran weekly meetings remotely, and I tracked progress and task assignments. I networked and put together marketing plans, while simultaneously learning front end development skills, in order to be a stronger teammate and share my vision as a team leader. All this was done through a bootstrapped budget.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Helpdesk Technician <span class="job-dash">-</span> Turner Investments</h3></li>
-        </ul>
-        <p class="text-mute">Main point of contact for Help Desk and End User Support. I managed email/phone/verbal response, documenting cases in Salesforce in order to ensure smooth workflow among IT team. Cases covered software and hardware troubleshooting, system updates, virus protection and removal, configurations for devices, and assisting the Firm/IT department as needed. I had to think on the fly and learn as I went. If I didn’t know the answer I found it.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list ">
-          <li><h3 class="bold">Thru Hiker <span class="job-dash">-</span> Appalachian Trail</h3></li>
-        </ul>
-        <p class="text-mute">Spanning five months I completed a thru-hike of the entire 2,184 mile Appalachian Trail, a feat with a 20 percent success rate. This trek took me through extreme terrain and weather, and taught me invaluable skills. I learned to set lofty goals and break them down into smaller ones to achieve them. I built tremendous character, developed patience, became determined and self-motivated. I learned to succeed sometimes all it takes is shear will, and my personal favorite, discipline. These skills and personal traits carry over into my daily life and work ethic. I dedicated my journey by raising funds and awareness for the non-profit To Write Love On Her Arms.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Computer Technician <span class="job-dash">-</span> Misericordia University</h3></li>
-        </ul>
-        <p class="text-mute">I was a technician for the Campus Networking and Student Helpdesk, where I worked 30+ hour weeks on top of being a full time student. I managed the campus cable/internet infrastructure, helping to implement upgrades. I also manned the Helpdesk, providing support to students and faculty for everything but the kitchen sink.</p>
-      </div>
-      <hr class="divide-section">
-      <div class="job">
-        <ul class="inline-list">
-          <li><h3 class="bold">Caddie <span class="job-dash">-</span> Stonewall</h3></li>
-        </ul>
-        <p class="text-mute">Worked daily with high networth individuals networking and building rapport, while simutaneously growing and maintaining relationships with club partners and guests. This taught me crucial communication skills in a hands on environment.</p>
-      </div>
-    </div>
-   </div>
-  </div>  
-
-<!--=========================================== END EXPERIENCE -->
-<!-- ========================================== START SKILLS -->      
-      
-  <div class="section-skills">
-    <div class="row">
-      <div class="small-12 medium-centered columns width">
-        <div id="skills">
-          <h3>My Skills</h3>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill green label radius" title="The building blocks of the web.">HTML5/CSS3/JavaScript</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill green label radius" title="Do more with less code.">jQuery</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill green label radius" title="Building useful things with data.">REST APIs</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill green label radius" title="I work with both frameworks.">Bootstrap &amp; Foundation</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill green label radius" title="Clean and simple.">UI/UX</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill green label radius" title="Looking good on all your devices.">Responsive Design</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Development starts here.">Wireframes/Mockups</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Photoshop replacement? I think so.">Sketch</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Fast wire framing.">Balsamiq</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Use to analyze websites and code.">Chrome DevTools</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Version control is a must.">Git</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Rapid and flexible development.">Agile Methodology</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Mobile apps in the language of the web.">Hybrid Apps</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="My tools for building hybrid apps.">Cordova/PhoneGap/Ionic</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Our database. It's NoSQL, fast, and scales well. 'M' in MEAN stack.">Mongo</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Our web framework. 'E' in MEAN stack.">Express</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="To handle our views. 'A' in MEAN stack.">Angular</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Allowing us to write JavaScript on the backend. 'N' in MEAN stack.">Node</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Our template engine.">Jade</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill label green radius" title="Really helpful to our development life cycle.">Test Driven Development</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill blue label radius" title="I hold invaluable life skills and values.">I'm an Eagle Scout &amp; AT thru-hiker!</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill blue label radius" title="Built ride share app prototype Ride Shotty in 2 days.">Winner of Startup Weekend</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill orange label radius" title="I'll find the answer, and I love to learn.">Research &amp; Analytics</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill orange label radius" title="They'll be creative and get the point across effectively. No Power Points!">Presentations</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill orange label radius" title="It will be clear and concise.">Written &amp; Oral Com.</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill orange label radius" title="I'll take charge and create synergy through my team, while keeping the end goal in sight.">Project Management</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill orange label radius" title="I take a progressive approach, starting internally and growing out.">Business Development</span>
-          <span data-tooltip data-options="disable_for_touch:true" class="has-tip label-skill orange label radius" title="It's all about the customer experience!">Customer Focus</span>
-        </div>
-        <div id="learning">
-        <h3>Currently Learning</h3>
-        <span data-tooltip data-options="disable_for_touch:true" class="has-tip black label-skill label radius" title="Because I love to learn.">As Much As Possible</span>
-        </div>
-      </div> 
-    </div>
-  </div>
-
-<!--================================================================================ END SKILLS -->  
-<!--================================================================================ START PASSIONS -->
-
-<div class="section-passions" id="passions">
-  <div class="row">
-    <h2 class="text-center fit-a">What I Do</h2>
-    <div class="large-6 columns">
-      <div>
-        <span class="align-center label-passion black label radius">I Go Outside</span>
-        <p class="passion-content">In 2012 I thru hiked the entire 2,184 mile Appalachian Trail, Georgia to Maine. What I learned I cannot begin to put to words.</p>
-      </div>
-    </div>
-    <div class="large-6 columns">
-        <noscript><img src="img/katahdin-medium.jpg" alt="Mt Katahdin Baxter State Park Maine"></noscript>
-        <img data-interchange="[img/katahdin-small.jpg, (default)], [img/katahdin-medium.jpg, (medium)], [img/katahdin-medium.jpg, (large)]" class="pic-center th radius passions-pic" alt="Mt Katahdin Baxter State Park Maine">
-    </div>  
-  </div>    
-  <div class="row">
-    <div class="large-6 columns">
-      <div>
-        <span class="align-center label-passion black label radius">I Drink Coffee</span>
-        <p class="passion-content">Coffee is a crucial experience to my day and workflow. I grind daily and brew manually. I switch between an Aeropress, Chemex, and Hario V60. I'm a purist at heart.</p>
-      </div>
-    </div>
-    <div class="large-6 columns">
-       <noscript><img src="img/coffee-medium.jpg" alt="Specialty Coffee"></noscript>
-      <img data-interchange="[img/coffee-small.jpg, (default)], [img/coffee-medium.jpg, (medium)], [img/coffee-medium.jpg, (large)]" class="pic-center th radius passions-pic" alt="Specialty Coffee">
-    </div>
-  </div>      
-  <div class="row">
-    <div class="large-6 columns">
-      <div>
-        <span class="align-center label-passion black label radius">I Run</span>
-        <p class="passion-content">Running is my time to reflect and filter out all the noise in life, so I can think clearly and effectively. A lot of ideas get discovered and sorted out here.</p>
-      </div>
-    </div>
-    <div class="large-6 columns">
-       <noscript><img src="img/run-medium.jpg" alt="Trail Running"></noscript>
-      <img data-interchange="[img/run-small.jpg, (default)], [img/run-medium.jpg, (medium)], [img/run-medium.jpg, (large)]" class="pic-center th radius passions-pic" alt="Trail Running">
-    </div>
-  </div>      
-</div>  
-
-<!--======================================================= END PASSIONS -->
-<!--======================================================= START CONNECT -->
-
-<div class="section-connect" id="connect">
-  <div class="row">
-    <div class="large-12 columns text-center">
-      <h2 class="fit-a">Let's Collaborate</h2>
-      <div class="mail"><a href="mailto:seth.shober@gmail.com">seth.shober<i class="at fi-at-sign"></i>gmail.com</a></div>
-      <div>
-        <a href="https://twitter.com/sethshober" target="_blank"><i class="icon fi-social-twitter"></i></a>
-        <a href="https://github.com/sethshober" target="_blank"><i class="icon fi-social-github"></i></a>
-        <a href="https://www.linkedin.com/in/sethshober" target="_blank"><i class="icon fi-social-linkedin"></i></a>
-      </div>  
-    </div> 
-  </div>
-</div>
-
-<!--======================================================= END CONNECT -->
-
-<footer class="text-center">Seth Shober &#65073; sometime in 2014</footer>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-  <script src="js/framework.js"></script>
-  <script src="js/fittext.js"></script>
-  <script src="js/fastclick.js"></script>
-  <script type="text/javascript">
-    
-    $(document).foundation();
-
-    $(".fit-a").fitText(1.2); //more aggressive
-    $(".fit-b").fitText(0.8); //less aggressive
-    $(".fit-name").fitText(0.65);
-    $(".fit-title").fitText(1.65);
-
-
-    $(".scroll").click(function(event){
-      event.preventDefault();
-      var id = $(this).attr("href");
-      var divPosition = $(id).offset().top;
-      $("html, body").animate({scrollTop: divPosition}, 'slow', 'swing');
-    });
-
-  </script>
-
-</body>
+	</body>
 </html>
