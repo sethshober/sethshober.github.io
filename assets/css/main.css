@@ -85,7 +85,7 @@
 	body {
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url("../../images/katahdin.jpg");
+		background-image: url("../img/katahdin.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
