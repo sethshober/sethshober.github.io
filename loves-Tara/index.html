@@ -114,7 +114,7 @@
       color: #2ac7b7;
     }
 
-    iframe {
+    .player, iframe {
       margin: 1em auto 1em auto;
       display: block;
     }
@@ -137,7 +137,7 @@
     .quote {
       font-style: italic;
     }
-    
+
     .darken {
       font-weight: 700;
     }
@@ -184,8 +184,7 @@
       <footer>
           Made with <span>&hearts;</span>
       </footer>
-
-      <iframe width="350" height="180" src="https://www.youtube.com/embed/GKIx-5WbIGU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="player"></div>
     </div>
   </div>
   <script>
@@ -202,5 +201,25 @@
       }
     }
   </script>
+
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  let player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '180',
+      width: '350',
+      videoId: 'GKIx-5WbIGU',
+      events: {
+        'onReady': onPlayerReady,
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+</script>
 </body> 
 </html>
